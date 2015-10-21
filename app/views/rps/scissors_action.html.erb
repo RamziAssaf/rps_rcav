@@ -1,11 +1,38 @@
-<h1><%= 'Hey there!' %></h1>
+
+<div class="row">
+	<div class="col-md-offset-2 col-md-4">
+		<div class="panel panel-success">
+  			<div class="panel-heading">
+    			<h3 class="panel-title text-center"><%= @user_move.capitalize %></h3>
+  			</div>
+  			<div class="panel-body">
+   				<img src=<%= @user_link_image %> style="width: 100%; max-height: 100%">
+  			</div>
+		</div>
+	</div>
+
+    <div class="col-md-4">
+    	<div class="panel panel-danger">
+  			<div class="panel-heading">
+    			<h3 class="panel-title text-center"><%= @computer_move.capitalize %></h3>
+  			</div>
+  			<div class="panel-body">
+   				<img src=<%= @computer_link_image %> style="width: 100%; max-height: 100%">
+  			</div>
+		</div>
+    </div>
+</div>
 
 
-<h2><%= 'Your move:' %></h2>
-	<li><%= @user_move %></li>
 
-<h2><%= 'Computer move:' %></h2>
-	<li><%= @computer_move %></li>
 
-<h2><%= 'Result:' %></h2>
-	<li><%= @results %></li>
+<div class="row">
+   	<div class="col-md-12">
+   		<div class="panel panel-default">
+  			<div class="panel-heading">
+  			<div class="text-center">
+  				<h1><span class="label label-lg label-danger"><%= @results %></span></h1>
+  			</div>
+		</div>
+   	</div>
+</div>
