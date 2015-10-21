@@ -6,9 +6,36 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<%= yield %>
+	<link rel="stylesheet" type="text/css" href="http://localhost:3000/assets/css/bootstrap.css">
+
+
+	<div class="container">
+	    <div class="row"><hr></div>
+	    <div class="row">
+	        <div class="col-md-offset-2 col-md-8">
+	        	  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+					  <div class="btn-group" role="group">
+					    <a href="/rock"><button type="button" class="btn btn-primary">Play Rock</button></a>
+					  </div>
+					  <div class="btn-group" role="group">
+					    <a href="/paper"><button type="button" class="btn btn-info">Play Paper</button></a>
+					  </div>
+					  <div class="btn-group" role="group">
+					    <a href="/scissors"><button type="button" class="btn btn-primary">Play Scissors</button></a>
+					  </div>
+				  </div>
+	        </div>
+	    </div>
+
+	    <div class="row"><hr></div>
+
+        <%= yield %>
+
+	</div>
 
 </body>
+
 </html>
