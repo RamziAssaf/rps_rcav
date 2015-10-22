@@ -7,10 +7,13 @@ class RpsController < ApplicationController
 		@computer_link_image = "http://localhost:3000/assets/images/#{@computer_move}.png"
 		if @user_move == @computer_move
 			@results = "You tied!"
+			@label_type = "warning"
 		elsif @computer_move == "paper"
 			@results = "You lost!"
+			@label_type = "danger"
 		elsif @computer_move == "scissors"
 			@results = "You won!"
+			@label_type = "success"
 		end
 
 		render("rock_action.html.erb")
@@ -23,10 +26,13 @@ class RpsController < ApplicationController
 		@computer_link_image = "http://localhost:3000/assets/images/#{@computer_move}.png"
 		if @user_move == @computer_move
 			@results = "You tied!"
+			@label_type = "warning"
 		elsif @computer_move == "rock"
 			@results = "You won!"
+			@label_type = "success"
 		elsif @computer_move == "scissors"
 			@results = "You lost!"
+			@label_type = "danger"
 		end
 		
 		render("paper_action.html.erb")
@@ -39,10 +45,13 @@ class RpsController < ApplicationController
 		@computer_link_image = "http://localhost:3000/assets/images/#{@computer_move}.png"
 		if @user_move == @computer_move
 			@results = "You tied!"
+			@label_type = "warning"
 		elsif @computer_move == "rock"
 			@results = "You lost!"
+			@label_type = "danger"
 		elsif @computer_move == "paper"
 			@results = "You won!"
+			@label_type = "success"
 		end
 
 		render("scissors_action.html.erb")
